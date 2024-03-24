@@ -125,7 +125,6 @@ def choose_elite(chromosome,fitness):
     i =temp.index(max(temp))
     el.append(chromosome[i])
     del(temp[i])
-    j=temp.index(max(temp))+1
     el.append(chromosome[j])
     return el
  
