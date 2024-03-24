@@ -120,13 +120,9 @@ def mutation(chromosome, pMut):
             mutated_chromosome += bit
     return mutated_chromosome
 def choose_elite(chromosome,fitness):
-    el =[]
-    temp=fitness.copy()
-    i =temp.index(max(temp))
-    el.append(chromosome[i])
-    del(temp[i])
-    el.append(chromosome[j])
-    return el
+      sorted = [chromosome for _, chromosome in sorted(zip(fitness, chromosome), reverse=True)]
+      elite =  sorted[:2]
+      return elite
  
 runs=1
 population_size=100
